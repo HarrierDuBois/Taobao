@@ -3,7 +3,7 @@ import numpy as np
 from deepctr.models import DIN
 from deepctr.feature_column import SparseFeat, VarLenSparseFeat, DenseFeat,get_feature_names
 
-
+# DIN方法
 def get_xy_fd():
 
     feature_columns = [SparseFeat('user',3,embedding_dim=10),SparseFeat(
