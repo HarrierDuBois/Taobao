@@ -161,7 +161,7 @@ test_data = matrix[matrix['origin'] == 'test'].drop(['label', 'origin'], axis=1)
 train_X, train_y = train_data.drop(['label'], axis=1), train_data['label']
 print(train_X)
 
-# 使用DIN模型
+# 通过Deepctr相关包导入DIN模型
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LinearRegression
