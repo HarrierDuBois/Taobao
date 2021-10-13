@@ -45,7 +45,7 @@ matrix['merchant_id'] = matrix['merchant_id'].astype('int32')
 del user_info, train_data1
 gc.collect()
 print(matrix)
-
+#构造特征
 # User特征处理
 groups = user_log.groupby(['user_id'])
 # 用户交互行为数量 u1
@@ -159,4 +159,4 @@ model.fit(X_train, y_train)
 prob = model.predict_proba(test_data)
 submission['prob'] = pd.Series(prob[:,1])
 submission.drop(['origin'], axis=1, inplace=True)
-submission.to_csv('prediction.csv', index=False)
+submission.to_csv('prediction.csv', index=False) #模型得分67.10
